@@ -2,14 +2,14 @@ import java.util.ArrayList;
 
 public class Table {
 
-    private ArrayList table = new ArrayList(9);
+    private ArrayList<String> table = new ArrayList<String>();
 
 
     public void isUsed(int place, String XO) {
 
         if (table.get(place).equals("X")) {
             System.out.println("Field allready taken!");
-            isUsed(place, XO);
+
         }
         if (table.get(place).equals("O")) {
             System.out.println("Field allready taken!");
@@ -35,7 +35,7 @@ public class Table {
     }
     public void newTable() {
         for (int i = 0; i < 9; i++) {
-            table.add(i, (i+1));
+            table.add(Integer.toString(i+1));
 
         }
 
